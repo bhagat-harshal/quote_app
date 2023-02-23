@@ -1,0 +1,2 @@
+The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.
+If you believe in yourself and have dedication and pride - and never quit, you'll be a winner. The price of victory is high but so are the rewards.
