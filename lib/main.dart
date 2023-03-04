@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quote_app/screen/detail_screen.dart';
 import 'package:quote_app/screen/home_screen.dart';
 
@@ -15,7 +16,7 @@ class Application extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo 1122',
       theme: ThemeData(
         // This is the theme of your application.
@@ -29,10 +30,10 @@ class Application extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      routes: {
-        "/": (contex) => const HomeScreen(),
-        "/detail": (contex) => const DetailScreen()
-      },
+      getPages: [
+        GetPage(name: '/', page: () => const HomeScreen()),
+        GetPage(name: '/detail', page: () => const DetailScreen()),
+      ],
       initialRoute: "/",
     );
   }

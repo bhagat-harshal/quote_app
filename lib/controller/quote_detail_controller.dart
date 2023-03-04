@@ -6,13 +6,10 @@ import 'package:get/get.dart';
 import 'package:quote_app/model/quote.dart';
 
 class QuoteDetailController extends GetxController {
-  
-final quotes = <Quote>[].obs;
+  final quotes = <Quote>[].obs;
 
-
-Future<List<Quote>> loadQuotes(String filePath) async {
-
-     if (kDebugMode) {
+  Future<List<Quote>> loadQuotes(String filePath) async {
+    if (kDebugMode) {
       print("loadQuotes called.");
     }
 
@@ -22,11 +19,9 @@ Future<List<Quote>> loadQuotes(String filePath) async {
     var jsonResult = jsonDecode(data);
     jsonResult.forEach((element) => list.add(Quote.fromJson(element)));
 
-   
     // Assign data.
     quotes.value = list;
-    
+
     return list;
   }
-
 }

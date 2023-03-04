@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quote_app/model/category.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -66,8 +67,9 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisSpacing: 10,
             crossAxisSpacing: 10),
         itemBuilder: (context, index) => GestureDetector(
-          onTap: () => Navigator.pushNamed(context, "/detail",
-              arguments: {"category": _category[index].filePath}),
+          onTap: () => Get.toNamed("/detail",
+              arguments: {"category": _category[index].filePath},
+              preventDuplicates: true),
           child: Container(
             alignment: Alignment.center,
             color: Colors.amber,
